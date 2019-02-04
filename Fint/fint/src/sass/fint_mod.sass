@@ -1,0 +1,397 @@
+$st_w: 6.25%
+$st_h: 6.25%
+
+$et_w: 12.5%
+$et_h: 12.5%
+
+$qt_w: 25%
+$qt_h: 25%
+
+$hfH_w: 100%
+$hfH_h: 50%
+
+$hfV_w: 50%
+$hfV_h: 100%
+
+$fl_w: 100%
+$fl_h: 100%
+
+
+@mixin mod($width, $height)
+  position: relative
+  display: block
+  float: left
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  background: no-repeat center fixed
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+  background-size: 150% 150%
+  font-family: sans-serif
+  transition: background-color .125s ease
+
+  &:hover
+    color: rgba(75, 75, 75, 0.75)
+    outline: none
+    cursor: pointer
+    transition: color .125s ease
+
+  &:focus
+    color: rgba(75, 75, 75, 1)
+    outline: none
+    cursor: pointer
+    transition: color .125s ease
+
+  &:not(:focus)
+    color: rgba(75, 75, 75, 0.5)
+    cursor: default
+    transition: color .125s ease
+
+.mod
+  @include mod(auto, auto)
+
+.mod_st
+  @include mod($st_w, $st_h)
+
+.mod_et
+  @include mod($et_w, $et_h)
+
+.mod_qt
+  @include mod($qt_w, $qt_h)
+
+.mod_hfH
+  @include mod($hfH_w, $hfH_h)
+
+.mod_hfV
+  @include mod($hfV_w, $hfV_h)
+
+.mod_fl
+  @include mod($fl_w, $fl_h)
+
+@mixin mod_in ($width, $height)
+  position: relative
+  display: block
+  float: left
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  outline: none
+  border: none
+  border-color: transparent
+  font-size: 2em
+  color: rgba(75, 75, 75, 0.5)
+  font-family: sans-serif
+  transition: background-color .125s ease
+  transition: color .125s ease
+
+  &:hover
+    color: rgba(75, 75, 75, 0.75)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:focus
+    color: rgba(75, 75, 75, 1)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:not(:focus)
+    color: rgba(75, 75, 75, 0.5)
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+.mod_in
+  @include mod_in(auto, auto)
+
+.mod_in_st
+  @include mod_in($st_w, $st_h)
+
+.mod_in_et
+  @include mod_in($et_w, $et_h)
+
+.mod_in_qt
+  @include mod_in($qt_w, $qt_h)
+
+.mod_in_hfH
+  @include mod_in($hfH_w, $hfH_h)
+
+.mod_in_hfV
+  @include mod_in($hfV_w, $hfV_h)
+
+.mod_in_fl
+  @include mod_in($fl_w, $fl_h)
+
+@mixin mod_ico ($width, $height)
+  position: relative
+  display: block
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  background: no-repeat center fixed
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+  background-size: 150% 150%
+  transform: translateY(-50%)
+  color: rgba(75, 75, 75, 0.5)
+  font-family: sans-serif
+  transition: color .125s ease
+
+.mod_ico
+  @include mod_ico(auto, auto)
+
+.mod_ico_st
+  @include mod_ico($st_w, $st_h)
+
+.mod_ico_et
+  @include mod_ico($et_w, $et_h)
+
+.mod_ico_qt
+  @include mod_ico($qt_w, $qt_h)
+
+.mod_ico_hfH
+  @include mod_ico($hfH_w, $hfH_h)
+
+.mod_ico_hfV
+  @include mod_ico($hfV_w, $hfV_h)
+
+.mod_ico_fl
+  @include mod_ico($fl_w, $fl_h)
+
+@mixin mod_txt ($width, $height)
+  position: relative
+  display: block
+  float: left
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  outline: none
+  border: none
+  border-color: transparent
+  font-size: 2em
+  color: rgba(75, 75, 75, 0.5)
+  font-family: sans-serif
+  transition: background-color .125s ease
+  transition: color .125s ease
+
+  &:hover
+    color: rgba(75, 75, 75, 0.75)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:focus
+    color: rgba(75, 75, 75, 1)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:not(:focus)
+    color: rgba(75, 75, 75, 0.5)
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+.mod_txt
+  @include mod_txt(auto, auto)
+
+.mod_txt_st
+  @include mod_txt($st_w, $st_h)
+  
+.mod_txt_et
+  @include mod_txt($et_w, $et_h)
+
+.mod_txt_qt
+  @include mod_txt($qt_w, $qt_h)
+
+.mod_txt_hfH
+  @include mod_txt($hfH_w, $hfH_h)
+
+.mod_txt_hfV
+  @include mod_txt($hfV_w, $hfV_h)
+
+.mod_txt_fl
+  @include mod_txt($fl_w, $fl_h)
+
+@mixin mod_img ($width, $height)
+  position: relative
+  display: block
+  float: left
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  background: no-repeat center fixed
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+  background-size: 150% 150%
+  font-family: sans-serif
+  transition: background-color .125s ease
+
+  &:hover
+    color: rgba(75, 75, 75, 0.75)
+    outline: none
+    cursor: pointer
+    transition: color .125s ease
+
+  &:focus
+    color: rgba(75, 75, 75, 1)
+    outline: none
+    cursor: pointer
+    transition: color .125s ease
+
+  &:not(:focus)
+    color: rgba(75, 75, 75, 0.5)
+    cursor: default
+    transition: color .125s ease
+
+.mod_img
+  @include mod_img(auto, auto)
+
+.mod_img_st
+  @include mod_img($st_w, $st_h)
+
+.mod_img_et
+  @include mod_img($et_w, $et_h)
+
+.mod_img_qt
+  @include mod_img($qt_w, $qt_h)
+
+.mod_img_hfH
+  @include mod_img($hfH_w, $hfH_h)
+
+.mod_img_hfV
+  @include mod_img($hfV_w, $hfV_h)
+
+.mod_img_fl
+  @include mod_img($fl_w, $fl_h)
+
+@mixin mod_vid ($width, $height)
+  position: relative
+  display: block
+  float: left
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  outline: none
+  border: none
+  border-color: transparent
+  font-family: sans-serif
+  transition: background-color .125s ease
+  transition: color .125s ease
+
+  &:hover
+    color: rgba(75, 75, 75, 0.75)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:focus
+    color: rgba(75, 75, 75, 1)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:not(:focus)
+    color: rgba(75, 75, 75, 0.5)
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+.mod_vid
+  @include mod_vid(auto, auto)
+
+.mod_vid_st
+  @include mod_vid($st_w, $st_h)
+
+.mod_vid_et
+  @include mod_vid($et_w, $et_h)
+
+.mod_vid_qt
+  @include mod_vid($qt_w, $qt_h)
+
+.mod_vid_hfH
+  @include mod_vid($hfH_w, $hfH_h)
+
+.mod_vid_hfV
+  @include mod_vid($hfV_w, $hfV_h)
+
+.mod_vid_fl
+  @include mod_vid($fl_w, $fl_h)
+
+@mixin mod_can ($width, $height)
+  position: relative
+  display: block
+  float: left
+  box-sizing: border-box;
+  width: $width
+  min-width: $width
+  height: $height
+  min-height: $height
+  outline: none
+  border: none
+  border-color: transparent
+  font-size: 2em
+  color: rgba(75, 75, 75, 0.5)
+  font-family: sans-serif
+  transition: background-color .125s ease
+  transition: color .125s ease
+
+  &:hover
+    color: rgba(75, 75, 75, 0.75)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:focus
+    color: rgba(75, 75, 75, 1)
+    outline: none
+    cursor: pointer
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+  &:not(:focus)
+    color: rgba(75, 75, 75, 0.5)
+    transition: background-color .125s ease
+    transition: color .125s ease
+
+.mod_can
+  @include mod_can(auto, auto)
+
+.mod_can_st
+  @include mod_can($st_w, $st_h)
+
+.mod_can_et
+  @include mod_can($et_w, $et_h)
+
+.mod_can_qt
+  @include mod_can($qt_w, $qt_h)
+
+.mod_can_hfH
+  @include mod_can($hfH_w, $hfH_h)
+
+.mod_can_hfV
+  @include mod_can($hfV_w, $hfV_h)
+
+.mod_can_fl
+  @include mod_can($fl_w, $fl_h)

@@ -1,0 +1,464 @@
+.c_v
+  top: 50%
+  transform: translateY(-50%)
+
+.c_h
+  margin: 0 auto
+
+.c_vh
+  margin: 0 auto
+  top: 50%
+  transform: translateY(-50%)
+
+// End center;
+
+.f_l
+  float: left
+
+.f_r
+  float: right
+
+.f_n
+  float: none
+
+.f_ini
+  float: initial
+
+.f_inh
+  float: inherit
+
+// End float;
+
+.p_f
+  position: fixed
+
+.p_s
+  position: static
+
+.p_r
+  position: relative
+
+.p_a
+  position: absolute
+
+.p_sty
+  position: sticky
+
+.p_ini
+  position: initial
+
+.p_inh
+  position: inherit
+
+// End position;
+
+@for $i from 1 through 100
+  .z_#{$i}
+    z-index: $i
+
+.z_ini
+  z-index: initial
+
+.z_inh
+  z-index: inherit
+
+// End z-index;
+
+@for $i from 1 through 100
+  .h_#{$i}
+    height: $i +0%
+    min-height: $i + 0%
+    max-height: $i + 0%
+    
+  .w_#{$i} 
+    width: $i + 0%
+    min-width: $i + 0%
+    max-width: $i + 0%
+
+.h_ini
+  height: initial
+  min-height: initial
+  max-height: initial
+
+.h_inh
+  height: inherit
+  min-height: inherit
+  max-height: inherit
+
+.w_ini
+  width: initial
+  min-width: initial
+  max-width: initial
+
+.w_inh
+  width: inherit
+  min-width: inherit
+  max-width: inherit
+
+// End width and height;
+
+@for $i from 1 through 8
+  .br_#{$i} 
+    border-radius: (0.25 * $i) + em
+
+.br_ini
+  border-radius: initial
+  
+.br_inh
+  border-radius: inherit
+
+// End border radius;
+@for $i from 1 through 8
+  .br_tl_#{$i} 
+    border-top-left-radius: (0.25 * $i) + em
+
+  .br_tr_#{$i}
+    border-top-right-radius: (0.25 * $i) + em
+
+  .br_bl_#{$i}
+    border-bottom-left-radius: (0.25 * $i) + em
+
+  .br_br_#{$i}
+    border-bottom-right-radius: (0.25 * $i) + em
+
+.br_tl_ini
+  border-radius: initial
+  
+.br_tl_inh
+  border-radius: inherit
+
+.br_tr_ini
+  border-radius: initial
+  
+.br_tr_inh
+  border-radius: inherit
+
+.br_bl_ini
+  border-radius: initial
+  
+.br_bl_inh
+  border-radius: inherit
+
+.br_br_ini
+  border-radius: initial
+  
+.br_br_inh
+  border-radius: inherit
+
+// End border radius precise;
+
+@for $i from 1 through 100
+  .o_#{$i}
+    opacity: 0.01 * $i
+
+.o_ini
+  opacity: initial
+
+.o_inh
+  opacity: inherit
+
+// End opacity;
+
+.e_d, .e_h
+  transition: opacity .125s ease
+
+.e_f
+  transition: opacity .125s ease
+  &:not(:focus)
+    transition: opacity .125s ease
+
+.e_a
+  transition: opacity .125s ease
+
+.e_d:disabled
+  cursor: not-allowed
+
+.e_h:hover
+  opacity: 0.75
+  cursor: pointer
+  transition: opacity .125s ease
+
+.e_f
+  &:focus
+    opacity: 0.75
+    cursor: pointer
+    transition: opacity .25s ease
+  &:not(:focus)
+    background-color: inherit
+    cursor: inherit
+    transition: opacity .125s ease
+
+.e_a
+  &:active
+    opacity: 0.5
+    cursor: pointer
+    transition: opacity .125s ease
+
+// End events;
+
+.t_l
+  text-align: left
+
+.t_c
+  text-align: center
+
+.t_r
+  text-align: right
+
+.t_j
+  text-align: justify
+
+.t_ini
+  text-align: initial
+
+.t_inh
+  text-align: inherit
+
+// End ext-align;
+
+@for $i from 1 through 100
+  .fs_#{$i}
+    font-size: (10 * $i) + 0%
+
+.fs_ini
+  font-size: initial
+
+.fs_inh
+  font-size: inherit
+
+  // Media queries for font-size;
+@media only screen and (max-width: 100px)
+  @for $i from 1 through 100
+    .fs_#{$i}
+      font-size: ((1 * 35 * $i) + 0%) / (8)
+
+@media only screen and (min-width: 0px) and (max-width: 399px)
+  @for $i from 1 through 100
+    .fs_#{$i}
+      font-size: ((2 * 30 * $i) + 0%) / (10)
+
+@media only screen and (min-width: 400px) and (max-width: 799px)
+  @for $i from 1 through 100
+    .fs_#{$i}
+      font-size: ((3 * 25 * $i) + 0%) / (8)
+
+@media only screen and (min-width: 800px) and (max-width: 1599px)
+  @for $i from 1 through 100
+    .fs_#{$i}
+      font-size: ((4 * 20 * $i) + 0%) / (6)
+
+@media only screen and (min-width: 1600px) and (max-width: 3199px)
+  @for $i from 1 through 100
+    .fs_#{$i}
+      font-size: ((5 * 15 * $i) + 0%) / (4)
+
+@media only screen and (min-width: 3200px) and (max-width: 4000px)
+  @for $i from 1 through 100
+    .fs_#{$i}
+      font-size: ((6 * 10 * $i) + 0%) / (2)
+
+// End Font sizing;
+
+.c_w
+  color: #FFF !important
+
+.c_b
+  color: #000 !important
+
+// End Font colour;
+
+@for $i from 1 through 100
+  .m_#{$i}
+    margin: $i + 0%
+
+  .ml_#{$i}
+    margin-left: $i + 0%
+
+  .mt_#{$i}
+    margin-top: $i + 0%
+
+  .mr_#{$i}
+    margin-right: $i + 0%
+    
+  .mb_#{$i}
+    margin-bottom: $i + 0%
+
+.m_ini
+  margin: initial
+    
+.m_inh
+  margin: inherit
+
+.ml_ini
+  margin-left: initial
+    
+.ml_inh
+  margin-left: inherit
+
+.mt_ini
+  margin-top: initial
+    
+.mt_inh
+  margin-top: inherit
+
+.mr_ini
+  margin-right: initial
+    
+.mr_inh
+  margin-right: inherit
+
+.mb_ini
+  margin-bottom: initial
+    
+.mb_inh
+  margin-bottom: inherit
+
+// End margin;
+
+@for $i from 1 through 100
+  .p_#{$i}
+    padding: $i + 0%
+
+  .pl_#{$i}
+    padding-left: $i + 0%
+
+  .pt_#{$i}
+    padding-top: $i + 0%
+
+  .pr_#{$i}
+    padding-right: $i + 0%
+    
+  .pb_#{$i}
+    padding-bottom: $i + 0%
+
+.p_ini
+  padding: initial
+    
+.p_inh
+  padding: inherit
+
+.pl_ini
+  padding-left: initial
+    
+.pl_inh
+  padding-left: inherit
+
+.pt_ini
+  padding-top: initial
+    
+.pt_inh
+  padding-top: inherit
+
+.pr_ini
+  padding-right: initial
+    
+.pr_inh
+  padding-right: inherit
+
+.pb_ini
+  padding-bottom: initial
+    
+.pb_inh
+  padding-bottom: inherit
+
+// End padding;
+
+.of_v
+  overflow: visible
+
+.of_h
+  overflow: hidden
+
+.of_s
+  overflow: scroll
+
+.of_a
+  overflow: auto
+
+.of_ini
+  overflow: initial
+
+.of_inh
+  overflow: inherit
+
+// End overflow;
+
+@for $i from 1 through 10
+  .bdr_t_#{$i}
+    border-top-width: $i + 0vh
+
+  .bdr_r_#{$i}
+    border-right-width: $i + 0vw
+
+  .bdr_b_#{$i}
+    border-bottom-width: $i + 0vh
+
+  .bdr_l_#{$i}
+    border-left-width: $i + 0vw
+
+.bdr_h 
+  border-style: hidden
+
+.bdr_s
+  border-style: solid
+
+.bdr_da
+  border-style: dashed
+
+.bdr_do 
+  border-style: dotted
+
+.bdr_dou 
+  border-style: double
+
+.bdr_g 
+  border-style: groove
+
+.bdr_r
+  border-style: ridge
+
+.bdr_i
+  border-style: inset 
+
+.bdr_o 
+  border-style: outset
+
+.bdr_ini 
+  border-style: initial
+
+.bdr_inh
+  border-style: inherit
+
+// End directional respective borders;
+
+@for $i from 1 through 100
+  .ls_#{$i}
+    letter-spacing: (0.1 * $i) + 0vw 
+
+// End Letter spacing operator;
+.fst_n
+  font-style: normal
+  
+.fst_b
+  font-weight: bold
+
+.fst_i
+  font-style: italic
+
+.fst_ob
+  font-style: oblique
+
+.fst_ini
+  font-style: initial
+
+.fst_inh
+  font-style: inherit
+
+// End font-style operators;
+.nsel::selection
+  color: inherit
+  background-color: inherit
+
+// End no selection operator;
+
+

@@ -1,0 +1,260 @@
+Single-Element Infrastructure (SEI)
+
+SEI CLASS (EBNF) = '.', 'mod', [ '_', [ 'in' | 'txt' | 'img' | 'vid' | 'can' ], 
+                                      [ 'st' | 'et' | 'qt' | 'hfH' | 'hfV' | 'fl'] ]
+
+!issue - merge .tfi_text into .mod SEI
+
+.mod     (main)
+.mod_in  (input)
+.mod_ico (icon)
+.mod_txt (textarea)
+.mod_img (image)
+.mod_vid (video)
+.mod_can (canvas)
+
+.mod
+.mod_st
+.mod_et
+.mod_qt
+.mod_hfH
+.mod_hfV
+.mod_fl
+
+.mod_in
+.mod_in_st
+.mod_in_et
+.mod_in_qt
+.mod_in_hfH
+.mod_in_hfV
+.mod_in_fl
+
+.mod_ico
+.mod_ico_st
+.mod_ico_et
+.mod_ico_qt
+.mod_ico_hfH
+.mod_ico_hfV
+.mod_ico_fl
+
+.mod_txt
+.mod_txt_st
+.mod_txt_et
+.mod_txt_qt
+.mod_txt_hfH
+.mod_txt_hfV
+.mod_txt_fl
+
+.mod_img
+.mod_img_st
+.mod_img_et
+.mod_img_qt
+.mod_img_hfH
+.mod_img_hfV
+.mod_img_fl
+
+.mod_vid
+.mod_vid_st
+.mod_vid_et
+.mod_vid_qt
+.mod_vid_hfH
+.mod_vid_hfV
+.mod_vid_fl
+
+.mod_can
+.mod_can_st
+.mod_can_et
+.mod_can_qt
+.mod_can_hfH
+.mod_can_hfV
+.mod_can_fl
+
+----------------------------------------------------
+Operators
+----------------------------------------------------
+OPR (EBNF) = '.', ''
+
+// Center;
+.c_v
+.c_h
+.c_vh
+
+// Float;
+.f_l (left)
+.f_r (right)
+.f_n (none)
+.f_ini (initial)
+.f_inh (inherit)
+
+// Position;
+.p_f (fixed)
+.p_s (static)
+.p_r (relative)
+.p_a (absolute)
+.p_sty (sticky)
+.p_ini (initial)
+.p_inh (inherit)
+
+// Z-index;
+.z_* (* = 1 - 100)
+.z_-* (* = -1 - -100)
+.z_a (auto)
+.z_ini (initial)
+.z_inh (inherit)
+
+// Height;
+.h_* (* = 1 - 100)
+.h_a (auto)
+.h_ini (initial)
+.h_inh (inherit)
+
+// Width;
+.w_* (* = 1 - 100)
+.w_a (auto)
+.w_ini (initial)
+.w_inh (inherit)
+
+// Border radius;
+.br_* (* = 1 - 6)
+.br_ini (initial)
+.br_inh (inherit)
+
+// Border radius precise;
+.br_tl_* (* = 1 - 6)
+.br_tl_ini (initial)
+.br_tl_inh (inherit)
+
+.br_tr_* (* = 1 - 6)
+.br_tr_ini (initial)
+.br_tr_inh (inherit)
+
+.br_bl_* (* = 1 - 6)
+.br_bl_ini (initial)
+.br_bl_inh (inherit)
+
+.br_br_* (* = 1 - 6)
+.br_br_ini (initial)
+.br_br_inh (inherit)
+
+// Opacity;
+.o_* (* = 1 - 100)
+.o_ini (initial)
+.o_inh (inherit)
+
+// Colours;
+.bgc_colourName(level)
+.bdrc_colourName(level)
+.c_colourName(level)
+
+// Events;
+.e_d (disabled)
+.e_h (hover)
+.e_f (focus)
+.e_a (active)
+
+// Text align;
+.t_l (left)
+.t_c (center)
+.t_r (right)
+.t_j (justify)
+.t_ini (initial)
+.t_inh (inherit)
+
+// Margin;
+.m_* (* = 1 to 100) (-)
+.m_a (auto)
+.m_ini (initial)
+.m_inh (inherit)
+
+.ml_* (* = 1 to 100) (-)
+.ml_a (auto)
+.ml_ini (initial)
+.ml_inh (inherit)
+
+.mt_* (* = 1 to 100) (-)
+.mt_a (auto)
+.mt_ini (initial)
+.mt_inh (inherit)
+
+.mr_* (* = 1 to 100) (-)
+.mr_a (auto)
+.mr_ini (initial)
+.mr_inh (inherit)
+
+.mb_* (* = 1 to 100) (-)
+.mb_a (auto)
+.mb_ini (initial)
+.mb_inh (inherit)
+
+// Padding;
+.p_* (* = 1 to 100) (-)
+.p_a (auto)
+.p_ini (initial)
+.p_inh (inherit)
+
+.pl_* (* = 1 to 100) (-)
+.pl_a (auto)
+.pl_ini (initial)
+.pl_inh (inherit)
+
+.pt_* (* = 1 to 100) (-)
+.pt_a (auto)
+.pt_ini (initial)
+.pt_inh (inherit)
+
+.pr_* (* = 1 to 100) (-)
+.pr_a (auto)
+.pr_ini (initial)
+.pr_inh (inherit)
+
+.pb_* (* = 1 to 100) (-)
+.pb_a (auto)
+.pb_ini (initial)
+.pb_inh (inherit)
+
+// Overflow;
+.of_v (visible)
+.of_h (hidden)
+.of_s (scroll)
+.of_a (auto)
+.of_ini (initial)
+.of_inh (inherit)
+
+// Borders;
+.bdr_t_* (* = 1 - 10 (vh))
+.bdr_r_* (* = 1 - 10 (vw))
+.bdr_b_* (* = 1 - 10 (vh))
+.bdr_l_* (* = 1 - 10 (vw))
+
+.bdr_h (hidden)
+.bdr_s  (solid)
+.bdr_da (dashed)
+.bdr_do (dotted)
+.bdr_dou (double)
+.bdr_g (groove)
+.bdr_r (ridge)
+.bdr_i (inset)
+.bdr_o (outset)
+.bdr_ini (initial)
+.bdr_inh (inherit)
+
+// Contrast colours;
+.c_w (white)
+.c_b (black)
+
+// Font size;
+.fs_* (* = 1 - 100)
+.fs_ini (initial)
+.fs_inh (inherit)
+
+// Font style;
+.fst_n (normal)
+.fst_ob (oblique)
+.fst_b (bold)
+.fst_i (italic)
+.fst_ini (initial)
+.fst_inh (inherit)
+
+
+!! Font-size responsiveness;
+!! Mod responsiveness;
