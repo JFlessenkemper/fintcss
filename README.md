@@ -1,5 +1,5 @@
 # Fint.css - A framework for all your needs! 🏗️
-#### This framework is not only modularly atomic ⚛️ 
+#### This framework is not only modular ⚛️ 
 #### ...but it's a foundation for which you'll build your sanity.
 
 
